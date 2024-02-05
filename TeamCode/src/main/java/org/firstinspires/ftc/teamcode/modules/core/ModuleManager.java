@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode.modules.core;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import org.firstinspires.ftc.teamcode.modules.ActiveIntake;
 import org.firstinspires.ftc.teamcode.modules.DriveTrain;
+import org.firstinspires.ftc.teamcode.modules.DuckRetriever;
 import org.firstinspires.ftc.teamcode.modules.FieldCentricDriveTrain;
 import org.firstinspires.ftc.teamcode.modules.concurrent.ConcurrentModule;
 import org.firstinspires.ftc.teamcode.util.SwitchStatement;
@@ -81,6 +82,7 @@ public final class ModuleManager {
             return moduleClass.cast(
                     new SwitchStatement<Class<?>, Module>()
                             .addCase(ActiveIntake.class, clazz -> new ActiveIntake(opMode))
+                            .addCase(DuckRetriever.class, clazz -> new DuckRetriever(opMode))
                             .addCase(DriveTrain.class, clazz -> new DriveTrain(opMode))
                             .addCase(FieldCentricDriveTrain.class, clazz -> new FieldCentricDriveTrain(opMode))
 
