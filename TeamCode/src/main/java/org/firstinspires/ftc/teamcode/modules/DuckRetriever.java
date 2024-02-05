@@ -21,12 +21,12 @@ public class DuckRetriever extends Module {
     public static final String SPINNER_MOTOR_NAME = "Spinner";
 
     // Calculations for how far we need to spin the motor
-    public static final double DUCK_DISK_RADIUS = 1;
-    public static final double SPINNER_RADIUS = 1;
-    public static final double DUCK_DISK_CIRCUMFERENCE = DUCK_DISK_RADIUS * 2 * Math.PI;
-    public static final double SPINNER_CIRCUMFERENCE = SPINNER_RADIUS * 2 * Math.PI;
-    public static final double TARGET_ROTATION_MULTIPLIER = SPINNER_CIRCUMFERENCE / DUCK_DISK_CIRCUMFERENCE;
-    public static final double ENCODER_RESOLUTION = 3;
+    public static final double DUCK_DISK_DIAMETER_MM = 381; // 15 inches in millimeters
+    public static final double SPINNER_DIAMETER_MM = 72;
+    public static final double DUCK_DISK_CIRCUMFERENCE_MM = DUCK_DISK_DIAMETER_MM * Math.PI;
+    public static final double SPINNER_CIRCUMFERENCE_MM = SPINNER_DIAMETER_MM * Math.PI;
+    public static final double TARGET_ROTATION_MULTIPLIER = SPINNER_CIRCUMFERENCE_MM / DUCK_DISK_CIRCUMFERENCE_MM;
+    public static final double ENCODER_RESOLUTION = ((((1+(46.0/17.0))) * (1+(46.0/11.0))) * 28);
     public static final double TARGET_POSITION_OFFSET = ENCODER_RESOLUTION * TARGET_ROTATION_MULTIPLIER;
 
     public static final double SPINNER_POWER_WHEN_ROTATING = 0.5;
